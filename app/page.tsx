@@ -16,39 +16,65 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
- 
 export default function Home() {
   return (
     <div>
       <Navbar />
       <main>
-        <HeroSection></HeroSection>
-        <Container className="my-5">
-          <Row className="my-4">
-            <Col md={6} className="align-self-center mb-3">
-              <h2>About Us</h2>
-              <h6>What We Do?</h6>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus assumenda, necessitatibus veniam vitae deleniti, quos nulla obcaecati eligendi nihil hic cum ex. Dolor ab eum dolore earum magni aut quis.
-              </p>
-              <Button variant="info">Learn More</Button>
+        <HeroSection />
+        
+        {/* About Section - Enhanced */}
+        <Container className="my-5 py-4">
+          <Row className="align-items-center g-4">
+            <Col md={6} className="order-md-1 order-2">
+              <div className="pe-md-4">
+                <h2 className="display-5 fw-bold text-primary mb-3">
+                  Welcome to Rawr's MeowCinema 🐾
+                </h2>
+                <h5 className="text-muted mb-4">
+                  Your private mini theater experience — anytime, anywhere.
+                </h5>
+                <h4 className="fw-bold mb-3">What We Do?</h4>
+                <p className="lead text-secondary">
+                  At Rawr's MeowCinema, we create a cozy, pet-friendly movie space where cat lovers can relax, enjoy films, and feel the warm company of our friendly cats. We combine comfort, ambience, and feline companionship to bring you a unique movie-watching experience you won't find anywhere else.
+                </p>
+                <Button variant="info" size="lg" className="mt-3 shadow-sm">
+                  Learn More →
+                </Button>
+              </div>
             </Col>
-            <Col md={6}>
-              <p>
-                <Image src="/images/about.jpg" alt="About Us" width={500}
-                height={500}></Image>
-              </p>
+            <Col md={6} className="order-md-2 order-1">
+              <div className="position-relative">
+                <Image 
+                  src="/images/about.jpg" 
+                  alt="About MeowCinema" 
+                  width={600}
+                  height={500}
+                  className="rounded shadow-lg w-100 h-auto"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
             </Col>
           </Row>
         </Container>
-        <section className="bg-dark">
-          <WorkSection></WorkSection>
+
+        {/* Work Section with Dark Background */}
+        <section className="bg-dark text-white py-5">
+          <WorkSection />
         </section>
-        <ServiceSection></ServiceSection>
-        <section id="contact">
-          <ContactSection></ContactSection>
+
+        {/* Service Section */}
+        <section className="py-5 bg-light">
+          <ServiceSection />
         </section>
-        <Footer></Footer>
+
+        {/* Contact Section */}
+        <section id="contact" className="py-5">
+          <ContactSection />
+        </section>
+
+        {/* Footer */}
+        <Footer />
       </main>
     </div>
   );

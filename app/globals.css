@@ -1,62 +1,437 @@
+/* ===========================
+   MEOWCINEMA CUSTOM STYLES
+   Purple Theme - Sesuai Logo
+   =========================== */
+
+/* Global Styles - Purple Theme */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary-purple: #6b4c8a;
+  --secondary-purple: #8b6ba8;
+  --light-purple: #b39dca;
+  --dark-purple: #3a2652;
+  --cream-bg: #f5f0e8;
+  --gold-accent: #f4c88a;
+  --text-dark: #2d1f3d;
+  --text-light: #6b5a7a;
+  --paw-white: #fef9f0;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body {
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  background-color: var(--paw-white);
+  color: var(--text-dark);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===========================
+   NAVBAR - Purple Theme
+   =========================== */
+.navbar.bg-dark {
+  background: linear-gradient(135deg, var(--dark-purple) 0%, var(--primary-purple) 100%) !important;
+  box-shadow: 0 4px 12px rgba(107, 76, 138, 0.3);
+}
+
+.navbar-dark .navbar-brand {
+  color: var(--gold-accent) !important;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--paw-white) !important;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-dark .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--gold-accent);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--gold-accent) !important;
+  transform: translateY(-2px);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+  width: 80%;
+}
+
+.btn-info {
+  background: linear-gradient(135deg, var(--secondary-purple) 0%, var(--primary-purple) 100%) !important;
+  border: 2px solid var(--gold-accent) !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+.btn-info:hover {
+  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--dark-purple) 100%) !important;
+  border-color: var(--gold-accent) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(107, 76, 138, 0.4);
+}
+
+.btn-outline-info {
+  border-color: var(--gold-accent) !important;
+  color: var(--gold-accent) !important;
+}
+
+/* ===========================
+   HERO SECTION - Purple Theme
+   =========================== */
+.hero-carousel .carousel-item {
+  transition: transform 0.8s ease;
+}
+
+.hero-carousel .carousel-caption {
+  background: linear-gradient(135deg, rgba(107, 76, 138, 0.85) 0%, rgba(58, 38, 82, 0.85) 100%);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid rgba(244, 200, 138, 0.3);
+}
+
+.carousel-caption h1 {
+  color: var(--gold-accent) !important;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+  color: var(--paw-white) !important;
+}
+
+/* ===========================
+   TEXT COLORS - Purple Theme
+   =========================== */
+.text-primary {
+  color: var(--primary-purple) !important;
+}
+
+.text-info {
+  color: var(--secondary-purple) !important;
+}
+
+.text-muted {
+  color: var(--text-light) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark-purple);
+}
+
+/* ===========================
+   CARD HOVER EFFECTS - Purple
+   =========================== */
+.hover-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid transparent;
+  background: white;
+}
+
+.hover-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(107, 76, 138, 0.3) !important;
+  border-color: var(--secondary-purple);
+}
+
+.hover-card .card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.hover-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+/* ===========================
+   BADGES - Purple Theme
+   =========================== */
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.badge.bg-info {
+  background: linear-gradient(135deg, var(--secondary-purple) 0%, var(--primary-purple) 100%) !important;
+}
+
+.badge.bg-success {
+  background: linear-gradient(135deg, #8b6ba8 0%, #6b4c8a 100%) !important;
+}
+
+.badge.bg-warning {
+  background: var(--gold-accent) !important;
+  color: var(--dark-purple) !important;
+}
+
+/* ===========================
+   SERVICE CARDS - Purple Theme
+   =========================== */
+.service-card {
+  background: linear-gradient(135deg, #fef9f0 0%, #f5f0e8 100%);
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  border: 2px solid var(--light-purple);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(107, 76, 138, 0.25);
+  border-color: var(--secondary-purple);
+}
+
+.service-icon {
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(107, 76, 138, 0.2));
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* ===========================
+   BUTTONS - Purple Theme
+   =========================== */
+.btn {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-dark {
+  background: linear-gradient(135deg, var(--dark-purple) 0%, var(--primary-purple) 100%) !important;
+  border: none !important;
+}
+
+.btn-dark:hover {
+  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(107, 76, 138, 0.4);
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(244, 200, 138, 0.2);
+  backdrop-filter: blur(10px);
+  border-color: var(--gold-accent) !important;
+}
+
+/* ===========================
+   DARK SECTIONS - Purple Theme
+   =========================== */
+.bg-dark {
+  background: linear-gradient(135deg, var(--dark-purple) 0%, var(--primary-purple) 100%) !important;
+}
+
+section.bg-dark {
+  border-top: 3px solid var(--gold-accent);
+  border-bottom: 3px solid var(--gold-accent);
+}
+
+.bg-light {
+  background: linear-gradient(135deg, var(--cream-bg) 0%, var(--paw-white) 100%) !important;
+}
+
+/* ===========================
+   FORMS - Purple Theme
+   =========================== */
+.form-control:focus {
+  border-color: var(--secondary-purple);
+  box-shadow: 0 0 0 0.2rem rgba(107, 76, 138, 0.25);
+}
+
+.form-select:focus {
+  border-color: var(--secondary-purple);
+  box-shadow: 0 0 0 0.2rem rgba(107, 76, 138, 0.25);
+}
+
+/* ===========================
+   CONTACT SECTION - Purple
+   =========================== */
+.card .bg-dark {
+  background: linear-gradient(135deg, var(--dark-purple) 0%, var(--primary-purple) 100%) !important;
+}
+
+.alert-success {
+  background-color: var(--light-purple) !important;
+  border-color: var(--secondary-purple) !important;
+  color: var(--dark-purple) !important;
+}
+
+/* ===========================
+   FOOTER - Purple Theme
+   =========================== */
+footer#footer {
+  background: linear-gradient(180deg, var(--dark-purple) 0%, #2d1f3d 100%) !important;
+  border-top: 4px solid var(--gold-accent);
+}
+
+.hover-link {
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.hover-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--gold-accent);
+  transition: width 0.3s ease;
+}
+
+.hover-link:hover {
+  color: var(--gold-accent) !important;
+}
+
+.hover-link:hover::after {
+  width: 100%;
+}
+
+.hover-social {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.hover-social:hover {
+  color: var(--gold-accent) !important;
+  transform: translateY(-5px) scale(1.2);
+}
+
+footer h5, footer h6 {
+  color: var(--gold-accent) !important;
+}
+
+/* ===========================
+   ANIMATIONS
+   =========================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* For Contact Section Start */
-#contact{
-  background: url(/images/map.jpg);
-  background-size: cover;       
-  background-repeat: no-repeat;  
-  background-position: center; 
+.animate__animated {
+  animation-duration: 1s;
 }
-/* For Contact Section End */
 
-/* For Footer Start */
-#footer ul li a{
-  color: #262626;
-  font-weight: 500;
-  text-decoration: none;
+.animate__fadeInDown {
+  animation-name: fadeInDown;
 }
-#footer ul li a:hover {
-  text-decoration: underline;
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
 }
-/* For Footer end */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   PAW PRINTS DECORATION
+   =========================== */
+.paw-decoration::before {
+  content: '🐾';
+  position: absolute;
+  opacity: 0.1;
+  font-size: 3rem;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  .hero-carousel .carousel-caption {
+    bottom: 10% !important;
+    padding: 1rem;
+  }
+
+  .display-3 {
+    font-size: 2rem !important;
+  }
+
+  .display-5 {
+    font-size: 1.5rem !important;
+  }
+
+  .hover-card:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+}
+
+/* ===========================
+   UTILITIES
+   =========================== */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(58, 38, 82, 0.3);
+}
+
+.bg-gradient-purple {
+  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--dark-purple) 100%);
+}
+
+/* Card Image Overlay for Better Text Readability */
+.card-img-overlay {
+  background: linear-gradient(to bottom, rgba(58, 38, 82, 0) 0%, rgba(58, 38, 82, 0.8) 100%);
+}
+
+/* Section Spacing */
+section {
+  padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 5rem 0;
+  }
+}
+
+/* About Section Enhancement */
+.about-section {
+  position: relative;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold-accent) 0%, var(--primary-purple) 50%, var(--gold-accent) 100%);
+}

@@ -1,24 +1,74 @@
 "use client";
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col, Image, Card } from 'react-bootstrap';
 
 function ServiceSection() {
     return (
-        <Container className='my-5'>
-            <Row>
-                <Col md={4} className="mb-3 text-center mb-3 py=3">
-                    <Image src="images/about-icon1.png" alt="Service 1" fluid ></Image>
-                    <h3>Service 1</h3>
-                    <p>Description of Service 1.</p>
+        <Container className='py-5'>
+            <Row className="mb-5">
+                <Col md={12} className="text-center">
+                    <h2 className="display-5 fw-bold mb-3">Why Choose MeowCinema?</h2>
+                    <p className="lead text-muted">
+                        We offer more than just a movie — we create memorable experiences
+                    </p>
                 </Col>
-                <Col md={4} className="mb-3 text-center mb-3 py=3">
-                    <Image src="images/about-icon2.png" alt="Service 2" fluid ></Image>
-                    <h3>Service 2</h3>
-                    <p>Description of Service 2.</p>
+            </Row>
+            <Row className="g-4">
+                <Col md={4}>
+                    <Card className="text-center border-0 h-100 p-4 service-card">
+                        <div className="mb-4">
+                            <Image 
+                                src="images/about-icon1.png" 
+                                alt="Flexible Booking" 
+                                fluid
+                                className="service-icon"
+                                style={{ maxHeight: '100px', objectFit: 'contain' }}
+                            />
+                        </div>
+                        <Card.Body>
+                            <h4 className="fw-bold mb-3">📅 Flexible Booking</h4>
+                            <p className="text-muted">
+                                Book your preferred room, time, and duration with our simple and seamless online reservation system. Available 24/7 for your convenience.
+                            </p>
+                        </Card.Body>
+                    </Card>
                 </Col>
-                    <Col md={4} className="mb-3 text-center mb-3 py=3">
-                    <Image src="images/about-icon3.png" alt="Service 3" fluid ></Image>
-                    <h3>Service 3</h3>
-                    <p>Description of Service 3.</p>
+                <Col md={4}>
+                    <Card className="text-center border-0 h-100 p-4 service-card">
+                        <div className="mb-4">
+                            <Image 
+                                src="images/about-icon2.png" 
+                                alt="Personalized Experience" 
+                                fluid
+                                className="service-icon"
+                                style={{ maxHeight: '100px', objectFit: 'contain' }}
+                            />
+                        </div>
+                        <Card.Body>
+                            <h4 className="fw-bold mb-3">✨ Personalized Experience</h4>
+                            <p className="text-muted">
+                                Customize your room setup, snacks, ambience, or choose extra cat time for a more tailored and unforgettable movie session.
+                            </p>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col md={4}>
+                    <Card className="text-center border-0 h-100 p-4 service-card">
+                        <div className="mb-4">
+                            <Image 
+                                src="images/about-icon3.png" 
+                                alt="Premium Add-Ons" 
+                                fluid
+                                className="service-icon"
+                                style={{ maxHeight: '100px', objectFit: 'contain' }}
+                            />
+                        </div>
+                        <Card.Body>
+                            <h4 className="fw-bold mb-3">🎁 Premium Add-Ons</h4>
+                            <p className="text-muted">
+                                Enjoy premium snacks, themed decorations, high-quality surround sound, and exclusive private cat playtime packages.
+                            </p>
+                        </Card.Body>
+                    </Card>
                 </Col>
             </Row>
         </Container>
