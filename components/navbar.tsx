@@ -10,7 +10,7 @@ function NavbarComponent() {
     return (
         <Navbar expand="lg" className="bg-dark navbar-dark shadow-sm" sticky="top">
             <Container fluid className="px-4">
-                <Navbar.Brand href="#" className="fw-bold fs-4 d-flex align-items-center gap-2">
+                <Navbar.Brand href="/#home" className="fw-bold fs-4 d-flex align-items-center gap-2">
                     <span style={{ fontSize: '1.8rem' }}>🐾</span>
                     <span>CineMeow</span>
                 </Navbar.Brand>
