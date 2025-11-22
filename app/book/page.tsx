@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Container, Row, Col, Form, Button, Card, Badge, Alert, Modal } from "react-bootstrap";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
@@ -30,7 +30,7 @@ const rooms = [
     id: "themed-retro",
     name: "Retro Cinema Theme",
     price: 200000,
-    image: "/images/image-46.jpg",
+    image: "/images/image-45.jpg",
     description: "Vintage theater vibes with classic movie posters",
     capacity: "4-6 guests"
   },
@@ -38,7 +38,7 @@ const rooms = [
     id: "themed-nightsky",
     name: "Night Sky Theme",
     price: 200000,
-    image: "/images/image-45.jpg",
+    image: "/images/image-46.jpg",
     description: "Starlit ambiance perfect for romantic movies",
     capacity: "2-4 guests"
   }

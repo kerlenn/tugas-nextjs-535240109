@@ -42,9 +42,9 @@ export default function Home() {
                 <p className="lead text-secondary">
                   At CineMeow, we create a cozy, pet-friendly movie space where cat lovers can relax, enjoy films, and feel the warm company of our friendly cats. We combine comfort, ambience, and feline companionship to bring you a unique movie-watching experience you won't find anywhere else.
                 </p>
-                <Button variant="info" size="lg" className="mt-3 shadow-sm">
+                {/* <Button variant="info" size="lg" className="mt-3 shadow-sm">
                   Learn More →
-                </Button>
+                </Button> */}
               </div>
             </Col>
             <Col md={6} className="order-md-2 order-1">

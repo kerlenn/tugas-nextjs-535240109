@@ -31,7 +31,7 @@ function WorkSection() {
                                 A warm, intimate room designed for comfort, complete with soft lighting, plush seating, and friendly cats to keep you company throughout your movie experience.
                             </Card.Text>
                             <div className="d-grid mt-3">
-                                <Button variant="dark" size="lg">Explore Room →</Button>
+                                {/* <Button variant="dark" size="lg">Explore Room →</Button> */}
                             </div>
                         </Card.Body>
                     </Card>
@@ -51,7 +51,7 @@ function WorkSection() {
                                 Choose from various themed spaces—Cute, Retro, Night Sky, or Minimalist—each crafted to match your preferred movie vibes and aesthetic preferences.
                             </Card.Text>
                             <div className="d-grid mt-3">
-                                <Button variant="dark" size="lg">View Themes →</Button>
+                                {/* <Button variant="dark" size="lg">View Themes →</Button> */}
                             </div>
                         </Card.Body>
                     </Card>
@@ -71,7 +71,7 @@ function WorkSection() {
                                 Perfect for small celebrations, private movie dates, pet meet-ups, or a quiet chill session with your favorite humans and adorable cats.
                             </Card.Text>
                             <div className="d-grid mt-3">
-                                <Button variant="dark" size="lg">Book Event →</Button>
+                                {/* <Button variant="dark" size="lg">Book Event →</Button> */}
                             </div>
                         </Card.Body>
                     </Card>
