@@ -6,7 +6,7 @@ function ServiceSection() {
         <Container className='py-5'>
             <Row className="mb-5">
                 <Col md={12} className="text-center">
-                    <h2 className="display-5 fw-bold mb-3">Why Choose MeowCinema?</h2>
+                    <h2 className="display-5 fw-bold mb-3">Why Choose CineMeow?</h2>
                     <p className="lead text-muted">
                         We offer more than just a movie — we create memorable experiences
                     </p>

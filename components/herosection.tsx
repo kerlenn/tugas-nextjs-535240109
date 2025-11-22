@@ -10,18 +10,18 @@ interface Slide {
 const HeroSection = () => {
     const slides: Slide[] = [
         {
-            title: "First slide label",
-            subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, harum",
+            title: "CineMeow Cozy Screening Room",
+            subtitle: "A warm, calm, and comfortable movie space designed for cat lovers to relax and enjoy films without distractions.",
             imageUrl: "/images/banner_01.JPG",
         },
         {
-            title: "Second slide label",
-            subtitle: "Loren ipsum dolor sit amet, consectetur adipiscing elit",
+            title: "CineMeow Cat Companion Experience",
+            subtitle: "A curated library of diverse movies—from classics to new releases—ready to match any mood or moment.",
             imageUrl: "/images/banner_02.JPG",
         },
         {
-            title: "Third slide label",
-            subtitle: "Loren ipsum dolor sit amet, consectetur adipiscing elit",
+            title: "CineMeow Wide Movie Selection",
+            subtitle: "Enjoy your movie time with friendly, adorable cats that create a soothing and joyful atmosphere during each session.",
             imageUrl: "/images/banner_03.jpg",
         },
     ]

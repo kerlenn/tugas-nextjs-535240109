@@ -25,15 +25,15 @@ function ContactSection() {
                                 </p>
                                 <div className="mb-3">
                                     <h6 className="text-info">📍 Location</h6>
-                                    <p className="small">123 Meow Street, Cat City</p>
+                                    <p className="small">Meow Street 109, Cat City</p>
                                 </div>
                                 <div className="mb-3">
                                     <h6 className="text-info">📞 Phone</h6>
-                                    <p className="small">+62 123 456 7890</p>
+                                    <p className="small">+535 24 0109</p>
                                 </div>
                                 <div className="mb-3">
                                     <h6 className="text-info">✉️ Email</h6>
-                                    <p className="small">hello@meowcinema.com</p>
+                                    <p className="small">kerlen.535240109@stu.untar.ac.id</p>
                                 </div>
                             </Col>
 
@@ -57,7 +57,7 @@ function ContactSection() {
                                                 <Form.Label>Full Name *</Form.Label>
                                                 <Form.Control 
                                                     type="text" 
-                                                    placeholder="John Doe" 
+                                                    placeholder="Kerlen Nina Mae" 
                                                     required 
                                                 />
                                             </Form.Group>
@@ -67,7 +67,7 @@ function ContactSection() {
                                                 <Form.Label>Email Address *</Form.Label>
                                                 <Form.Control 
                                                     type="email" 
-                                                    placeholder="john@example.com" 
+                                                    placeholder="kerlen.535240109@stu.untar.ac.id" 
                                                     required 
                                                 />
                                             </Form.Group>
@@ -78,7 +78,7 @@ function ContactSection() {
                                         <Form.Label>Phone Number</Form.Label>
                                         <Form.Control 
                                             type="tel" 
-                                            placeholder="+62 812 3456 7890" 
+                                            placeholder="+535 24 0109" 
                                         />
                                     </Form.Group>
 
